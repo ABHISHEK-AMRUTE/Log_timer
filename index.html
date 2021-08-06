@@ -43,6 +43,13 @@
         font-weight: bolder;
         font-size: 15vh;
     }
+
+    #logText{
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px black solid;
+        
+    }
 </style>
 
 
@@ -57,10 +64,19 @@
             <span id="minutesText">00</span> : <span id="secondsText">00</span>
         </span>
         <button  class="but" id='start'>Start</button>
+        <button  class="but" id='pause'>Pause</button>
+        <br><input id='logText' placeholder="log text"> <button class="but" id="logBut">Log</button>
+       
+            <ol id="listText">
+                
+            </ol>
+       
+ 
     </div>
 
 
 </body>
+<script src="./util/listItem.js"></script>
 <script src="./timer.js"></script>
 
 
