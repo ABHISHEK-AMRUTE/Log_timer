@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Timer
+    </title>
+</head>
+<style>
+    @font-face {
+        font-family: 'timer';
+        src: url('./ff.ttf');
+    }
+
+    .outer {
+        text-align: center;
+        margin-top: 45vh;
+    }
+
+    .but {
+        background-color: blue;
+        box-shadow: 0px;
+        border-radius: 5px;
+        padding: 10px;
+        color: white;
+        font-weight: bold;
+        margin: 20px;
+        border: 1px blue solid;
+      
+
+    }
+
+    .but:hover {
+        cursor: pointer;
+        background-color: white;
+        color: blue;
+        border: 1px blue solid;
+    }
+
+    .time {
+        color: blue;
+        font-family: timer;
+        font-weight: bolder;
+        font-size: 15vh;
+    }
+</style>
+
+
+<body>
+
+    <div class="outer">
+        <button class="but" id='reset'>
+            Reset
+        </button>
+
+        <span class='time'>
+            <span id="minutesText">00</span> : <span id="secondsText">00</span>
+        </span>
+        <button  class="but" id='start'>Start</button>
+    </div>
+
+
+</body>
+<script src="./timer.js"></script>
+
+
+</html>
