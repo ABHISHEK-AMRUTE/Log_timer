@@ -50,7 +50,7 @@ window.onload = function () {
     logButton.addEventListener('click', function () {
 
         if (inputText.value != "") {
-            oderedList.appendChild(getListItem(inputText.value, (minutes / 60) + ":" + (second % 60)));
+            oderedList.appendChild(getListItem(inputText.value, (window.parseInt(second / 60)) + ":" + (second % 60)));
             inputText.value = ""
         }
 
