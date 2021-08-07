@@ -14,40 +14,44 @@
 
     .outer {
         text-align: center;
-        margin-top: 45vh;
+        margin-top: 30vh;
+        
     }
 
     .but {
-        background-color: blue;
+       
         box-shadow: 0px;
         border-radius: 5px;
         padding: 10px;
-        color: white;
+       
         font-weight: bold;
-        margin: 20px;
+        font-size: large;
+        
+        margin: 10px;
         border: 1px blue solid;
-      
+        background-color: white;
+        color: blue;
+        border: 1px blue solid;
 
     }
 
     .but:hover {
         cursor: pointer;
-        background-color: white;
-        color: blue;
-        border: 1px blue solid;
+        background-color: blue; 
+        color: white;
     }
 
     .time {
         color: blue;
         font-family: timer;
         font-weight: bolder;
-        font-size: 15vh;
+        font-size: 25vh;
     }
 
     #logText{
         padding: 10px;
         border-radius: 5px;
-        border: 1px black solid;
+        border: 1px blue solid;
         
     }
 </style>
@@ -56,14 +60,15 @@
 <body>
 
     <div class="outer">
-        <button class="but" id='reset'>
-            Reset
-        </button>
+        
 
         <span class='time'>
             <span id="minutesText">00</span> : <span id="secondsText">00</span>
-        </span>
-        <button  class="but" id='start'>Start</button>
+        </span> 
+        <br><br><br>
+       <button class="but" id='reset'>
+            Reset
+        </button> <button  class="but" id='start'>Start</button>
         <button  class="but" id='pause'>Pause</button>
         <br><input id='logText' placeholder="log text"> <button class="but" id="logBut">Log</button>
        
