@@ -11,12 +11,15 @@ window.onload = function () {
     const inputText = document.getElementById('logText')
     const oderedList = document.getElementById('listText')
 
-    var arr = []
 
     var minutes = 0;
     var second = 0;
 
     var timerInterval;
+    var  arr = JSON.parse(localStorage.getItem('logDataTime'));
+    console.log(arr)
+    if(arr===null)arr = [];
+    update();
 
     start.addEventListener('click', function () {
         if (timerInterval === undefined) {
@@ -49,14 +52,39 @@ window.onload = function () {
 
     logButton.addEventListener('click', function () {
 
-        if (inputText.value != "") {
-            oderedList.appendChild(getListItem(inputText.value, (window.parseInt(second / 60)) + ":" + (second % 60)));
-            inputText.value = ""
-        }
-
+        arr.push({
+            name: inputText.value,
+            time: (second / 3600) % 60 + ":" + (second / 60) % 60 + ":" + (second) % 60
+        })
+        update();
+        inputText.value = '';
     }
     )
 
+    function update() {
+
+        if(arr){
+            localStorage.setItem('logDataTime' , JSON.stringify(arr))
+            oderedList.innerHTML = "";
+            arr.forEach(ele => {
+                oderedList.appendChild(getListItem(ele.name, ele.time));
+            });
+            
+        }
+
+    }
+
+    function clear(){
+
+        console.log("in clear");
+        arr = [];
+        update();
+    }
+
+
+    document.getElementById('clear').addEventListener('click' , function(){
+        clear();
+    })
 
 }
 
