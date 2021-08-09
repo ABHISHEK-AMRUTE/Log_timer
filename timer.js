@@ -54,7 +54,7 @@ window.onload = function () {
 
         arr.push({
             name: inputText.value,
-            time: (second / 3600) % 60 + ":" + (second / 60) % 60 + ":" + (second) % 60
+            time: ((int)(second / 3600)) % 60 + ":" + ((int)(second / 60)) % 60 + ":" + (second) % 60
         })
         update();
         inputText.value = '';
